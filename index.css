@@ -23,9 +23,9 @@ body {
 }
 
 #result {
-  margin-top: 80px;
   position: box;
   margin: 0 auto;
+  margin-top: 40px;
   max-width: 200px;
   text-align: center;
   padding: 10px;

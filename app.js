@@ -9,7 +9,7 @@ function newItem(){
     node.setAttribute("id","table--content")
     var input = document.createElement("input")
     input.setAttribute("id","grade")
-    input.setAttribute("placeholder","Mark")  
+    input.setAttribute("placeholder","Mark (marks out of 100)")  
     input.setAttribute("type","number")
     input.setAttribute("type","number")  
     node.appendChild(input)
@@ -66,6 +66,33 @@ function calculate_gpa(grade, credits){
     result(sum/credit)
 }
 function result(gpa){
-    res.innerHTML = '<b>Result</b><br>Your gpa is '+gpa.toFixed(3)
+    pass = true
+    grade.forEach( e =>{
+        if(e == 0){
+            pass = false
+        }
+    })
     //    content.innerHTML = init_start+init_end+'<section id = "table--content">Your gpa is '+gpa+"<section>"+credit
+    if(pass){
+        if(!isNaN(gpa)){
+        res.innerHTML = '<b>Result</b><br>GPA is '+ +(Math.round(gpa + "e+2")  + "e-2") + "/10"
+        res.style.background = "#0F9D58"
+        }
+        else{
+            res.innerHTML = '<b>Result</b><br>Something went wrong.check your marks and credits'
+            res.style.background = "#F4B400"        
+        }
+        res.style.color = "white"
+    }
+    else{
+        if(!isNaN(gpa)){
+            res.innerHTML = '<b>Result</b><br> Failed'
+            res.style.background = "#DB4437"
+        }
+        else{
+            res.innerHTML = '<b>Result</b><br>Something went wrong.check your marks and credits'
+            res.style.background = "#F4B400"        
+        }
+        res.style.color = "white"
+    }
 }
