@@ -64,8 +64,15 @@ body
     #credits
         width: 70px
 .credits
-    background: rgba(255, 255, 255, 0.7)
-    width: 300px
+    position: fixed
+    background: rgba(255, 255, 255, 1)
+    width: fit-content
     margin: 0 auto
     margin-top: 40px
-    
+    bottom: 0px
+    padding: 2px
+    &:hover
+        color: red
+        box-shadow: 5px -5px 1px #BC273A
+    a
+        color: #222

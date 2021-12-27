@@ -91,9 +91,24 @@ body {
 }
 
 .credits {
-  background: rgba(255, 255, 255, 0.7);
-  width: 300px;
+  position: fixed;
+  background: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto;
   margin-top: 40px;
+  bottom: 0px;
+  padding: 2px;
+}
+
+.credits:hover {
+  color: red;
+  -webkit-box-shadow: 5px -5px 1px #BC273A;
+          box-shadow: 5px -5px 1px #BC273A;
+}
+
+.credits a {
+  color: #222;
 }
 /*# sourceMappingURL=index.css.map */
