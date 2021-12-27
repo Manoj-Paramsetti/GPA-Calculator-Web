@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -84,5 +84,12 @@ body {
 
 #CONTENT #grade {
   width: 180px;
+}
+
+.credits {
+  background: rgba(255, 255, 255, 0.7);
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=index.css.map */

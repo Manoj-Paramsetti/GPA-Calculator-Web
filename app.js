@@ -77,23 +77,23 @@ function result(gpa){
     //    content.innerHTML = init_start+init_end+'<section id = "table--content">Your gpa is '+gpa+"<section>"+credit
     if(pass){
         if(!isNaN(gpa)){
-        res.innerHTML = '<b>Result</b><br>GPA is '+ +(Math.round(gpa + "e+2")  + "e-2") + "/10"
+        res.innerHTML = '<b>Result</b><br><br> GPA is '+ +(Math.round(gpa + "e+2")  + "e-2") + "/10"
         res.style.background = "#0F9D58"
         }
         else{
-            res.innerHTML = '<b>Result</b><br>Something went wrong.check your marks and credits'
+            res.innerHTML = '<b>Result</b><br><br> Something went wrong.check your marks and credits'
             res.style.background = "#F4B400"        
         }
         res.style.color = "white"
     }
     else{
         if(!isNaN(gpa)){
-            res.innerHTML = '<b>Result</b><br> Failed'
+            res.innerHTML = '<b>Result</b><br><br> Failed'
             res.style.background = "#DB4437"
         }
         else{
-            res.innerHTML = '<b>Result</b><br>Something went wrong.check your marks and credits'
-            res.style.background = "#F4B400"        
+            res.innerHTML = '<b>Result</b><br><br> Something went wrong.check your marks and credits'
+            res.style.background = "#F4B400"       
         }
         res.style.color = "white"
     }
