@@ -11,6 +11,8 @@ function newItem(){
     input.setAttribute("id","grade")
     input.setAttribute("placeholder","Mark (marks out of 100)")  
     input.setAttribute("type","number")
+    input.setAttribute("min","0")
+    input.setAttribute("max","100")
     input.setAttribute("type","number")  
     node.appendChild(input)
     var input = document.createElement("div")

@@ -23,7 +23,7 @@
         <section id="tables">
             <section id="table">
                 <section id = "table--content">
-                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" id="grade">&#160;&#160;
+                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" min="0" max="100" id="grade">&#160;&#160;
                     <input type="number" name="credits" placeholder="Credits" id="credits">
                 </section>
                 <section id = "table--content">
@@ -31,10 +31,10 @@
                     <input type="number" name="credits" placeholder="Credits" id="credits">
                 </section>    
             </section>
-            <section id = "table--content">
-                <input type="button" onclick="newItem()" value="Add new subject">
+            <section id = "table--content" style="display: flex; justify-content: space-between;">
+                <input style="background-color: #333; color: #FFF; outline: none; border: 0; width: 140px; margin-top: 10px;" type="button" onclick="newItem()" value="Add new subject">
                 &#160;&#160;
-                <input style="background-color: #5555FF; color: white;" type="button" onclick="cal()" value="Calculate">
+                <input style="background-color: #ff1f5a; color: white; outline: none; border: 0; width: 85px; margin-top: 10px;" type="button" onclick="cal()" value="Calculate">
             </section>
         </section>
     </section>
