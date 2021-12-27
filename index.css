@@ -86,6 +86,10 @@ body {
   width: 180px;
 }
 
+#CONTENT #credits {
+  width: 70px;
+}
+
 .credits {
   background: rgba(255, 255, 255, 0.7);
   width: 300px;
