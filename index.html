@@ -4,45 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" type="image/png" href="favicon.jpeg"/>
-    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Open+Sans&display=swap" rel="stylesheet">
-    <title>GPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>GPA CALCULATOR</title>
+    <style>
+        .credits{
+            position: fixed;
+            background: rgba(255, 255, 255, 1);
+            width: 100%;
+            text-align: center;
+            top: 0;
+            padding: 10px;
+        }
+        .credits a {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <section id="HEADER">
-    <h1 align="center"
-    style="
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    ">GPA Calculator</h1>
-    </section>
+    <div class="credits border shadow-lg" style="font-family: 'Montserrat', sans-serif;">
+        Created by <a href="https://manojparamsetti.vercel.app" target="_blank" rel="noreferrer noopener">Manoj Paramsetti</a> ✨
+    </div>
+    <div class="w-full">
+        <div style="box-shadow: 1px 1px 6px rgba(0,0,0,0.123)" class="mx-auto container border w-[500px] rounded-lg p-2 my-12 mt-20">
+            <div id="table">
+                <p class="text-center font-extrabold text-slate-700 text-3xl mt-3" style="font-family: 'Rajdhani', sans-serif;">GPA Calculator</p>
+                <button onclick="newItem()" style="background-color: #32b797" class="mt-6 mb-2 flex-shrink-0 w-full hover:bg-blue-500 active:bg-blue-600 focus:outline-none rounded px-2 py-1 text-lg font-bold text-white border ">
+                    Add Course
+                </button>
+                <hr>
+                <div class="flex mb-2">
+                    <input class="mt-3 mx-auto px-2 py-1 text-lg
+                    w-[290px] bg-white border border-slate-300
+                    placeholder-slate-400 focus:outline-none focus:border-blue-500 
+                    focus:ring-blue-500 block w-lg rounded-sm focus:ring-1" type="number" name="grade" placeholder="Marks (Out of 100)" id="grade">
+                    <input class="mt-3 mx-auto px-2 py-1 text-lg
+                    w-[180px] bg-white border border-slate-300
+                    placeholder-slate-400 focus:outline-none focus:border-blue-500 
+                    focus:ring-blue-500 block w-lg rounded-sm focus:ring-1" type="number" name="grade" placeholder="Credits" id="credits">
+                </div>
+            </div>
+            <hr>
+            <button onclick="cal()" class=" mb-3 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none rounded px-5 py-3 text-center text-xl font-bold w-full text-white">
+                Calculate
+            </button>
+            <hr>
+            <div id="result" class="mx-auto container border rounded-lg p-2 mt-5">    
+                <p class="text-slate-600">Result will appear here</p>
+            </div>
+        </div>
+    </div>
 
-    <section id="CONTENT">
-        <section id="tables">
-            <section id="table">
-                <section id = "table--content">
-                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" min="0" max="100" id="grade">&#160;&#160;
-                    <input type="number" name="credits" placeholder="Credits" id="credits">
-                </section>
-                <section id = "table--content">
-                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" id="grade">&#160;&#160;
-                    <input type="number" name="credits" placeholder="Credits" id="credits">
-                </section>    
-            </section>
-            <section id = "table--content" style="display: flex; justify-content: space-between;">
-                <input style="background-color: #333; color: #FFF; outline: none; border: 0; width: 140px; margin-top: 10px;" type="button" onclick="newItem()" value="Add new subject">
-                &#160;&#160;
-                <input style="background-color: #ff1f5a; color: white; outline: none; border: 0; width: 85px; margin-top: 10px;" type="button" onclick="cal()" value="Calculate">
-            </section>
-        </section>
-    </section>
-    <section id = "result">
-        <b>Result</b>
-    </section>
-    <div class="credits">
-        <a href="https://manojparamsetti.vercel.app" target="_blank" rel="noreferrer noopener">Manoj Paramsetti</a> ✨
+    <div class="w-full">
+        <div style="box-shadow: 1px 1px 6px rgba(0,0,0,0.123)" class="mx-auto container border w-[500px] rounded-lg p-2 my-12">
+            <div id="table1">
+                <p class="text-center font-extrabold text-slate-700 text-3xl mt-3" style="font-family: 'Rajdhani', sans-serif;">CGPA Calculator</p>
+                <button onclick="newItemSem()" style="background-color: #32b797" class="mt-6 mb-2 flex-shrink-0 w-full hover:bg-blue-500 active:bg-blue-600 focus:outline-none rounded px-2 py-1 text-lg font-bold text-white border ">
+                    Add Semester
+                </button>
+                <hr>
+                <div class="flex mb-2">
+                    <input class="mt-3 mx-auto px-2 py-1 text-lg
+                    w-full bg-white border border-slate-300
+                    placeholder-slate-400 focus:outline-none focus:border-blue-500 
+                    focus:ring-blue-500 block w-lg rounded-sm focus:ring-1" type="number" name="grade" placeholder="Semester 1 GPA" id="gpa">
+                </div>
+            </div>
+            <hr>
+            <button onclick="calCGPA()" class=" mb-3 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none rounded px-5 py-3 text-center text-xl font-bold w-full text-white">
+                Calculate
+            </button>
+            <hr>
+            <div id="result2" class="mx-auto container border rounded-lg p-2 mt-5">    
+                <p class="text-slate-600">Result will appear here</p>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

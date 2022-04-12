@@ -84,6 +84,8 @@ body {
 
 #CONTENT #grade {
   width: 180px;
+  outline: none;
+  border: 1px solid grey;
 }
 
 #CONTENT #credits {

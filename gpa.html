@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/png" href="favicon.jpeg"/>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>GPA Calculator</title>
+</head>
+<body>
+    <section id="HEADER">
+    <h1 align="center"
+    style="
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    ">GPA Calculator</h1>
+    </section>
+
+    <section id="CONTENT">
+        <section id="tables">
+            <section id="table">
+                <section id = "table--content">
+                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" min="0" max="100" id="grade">&#160;&#160;
+                    <input type="number" name="credits" placeholder="Credits" id="credits">
+                </section>
+                <section id = "table--content">
+                    <input type="number" name="grade" placeholder="Mark (marks out of 100)" id="grade">&#160;&#160;
+                    <input type="number" name="credits" placeholder="Credits" id="credits">
+                </section>    
+            </section>
+            <section id = "table--content" style="display: flex; justify-content: space-between;">
+                <input style="background-color: #333; color: #FFF; outline: none; border: 0; width: 140px; margin-top: 10px;" type="button" onclick="newItem()" value="Add new subject">
+                &#160;&#160;
+                <input style="background-color: #ff1f5a; color: white; outline: none; border: 0; width: 85px; margin-top: 10px;" type="button" onclick="cal()" value="Calculate">
+            </section>
+        </section>
+    </section>
+    <section id = "result">
+        <b>Result</b>
+    </section>
+    <div class="credits">
+        <a href="https://manojparamsetti.vercel.app" target="_blank" rel="noreferrer noopener">Manoj Paramsetti</a> ✨
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
