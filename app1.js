@@ -1,0 +1,1 @@
+window.location = "https://gpa-manoj-paramsetti.vercel.app/"
